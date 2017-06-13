@@ -33394,7 +33394,7 @@ var Data = {
          {"line":"Performed follow-ups on validation test for the developed software."},
          {"line":"Maintained/adapted software documentation and artefacts."}
        ],
-       "period": "May 2016 - Present"
+       "period": "May 2016 - May 2017"
      },
      {
        "companyName": "Applied Research & Development Center",
@@ -33838,7 +33838,7 @@ const DateTag = () =>{
   return(
     React.createElement("div", {style: {position:"absolute", top:"15px", left: "695px", }}, 
       React.createElement("svg", {width: "225"}, 
-        React.createElement("polygon", {points: "15,10 190,10 190,35 15,35 0,22", fill: "#b9c9ea"})
+        React.createElement("polygon", {points: "15,10 195,10 195,35 15,35 0,22", fill: "#b9c9ea"})
       )
     )
   );
@@ -33887,7 +33887,7 @@ class ExperienceList extends React.Component{
                   )
                 ), 
                 React.createElement("div", {className: "ex-gradDate", style: {position:"relative", top:"-25px", left:"-500px", width:"220px"}}, 
-                  React.createElement("h4", {style: {position:"absolute", top:"18px", left:"715px", zIndex:'1', width:"220px"}}, ex.period), 
+                  React.createElement("h4", {style: {position:"absolute", top:"18px", left:"710px", zIndex:'1', width:"220px"}}, ex.period), 
                   React.createElement(DateTag, null)
                 ), 
                 React.createElement("div", {className: "ex-info", style: {position: "relative", width: "400px", left: "150px"}}, 
@@ -34346,13 +34346,15 @@ class SkillsList extends React.Component{
 
       if((scrollTopList + winHeightList) > skiPosList && showList){
         $('.ski-info').delay(550).animate({left: "0px"});
-        $('.levels').delay(550).animate({left: "250px"});
+        //$('.levels').hide().delay(1100).animate({left: "250px"}).fadeIn(100);
+        $('.levels').delay(700).animate({left: "250px"});
         showList = false;
         hideList = true;
       }
       else if((scrollTopList + winHeightList) < skiPosList && hideList){
         $('.ski-info').delay(550).animate({left: "400px"});
-        $('.levels').delay(550).animate({left: "-300px"});
+        $('.levels').delay(700).animate({left: "500px"});
+        //$('.levels').hide().animate({left: "500px"});;
         hideList = false;
         showList = true;
       }
@@ -34373,7 +34375,7 @@ class SkillsList extends React.Component{
             ), 
             React.createElement("div", {className: "ski-info", style: {position: "relative", width: "600px", left: "50px"}}, 
               React.createElement("h4", null, ski.skill), 
-              React.createElement("div", {className: "levels", style: {position: "absolute", width: "600px", top:"0px", left: "-300px"}}, 
+              React.createElement("div", {className: "levels", style: {position: "absolute", width: "600px", top:"0px", left: "500px"}}, 
                 React.createElement("div", null, 
                   _.range(ski.skillLevel).map( j =>
                     React.createElement("div", {key: j, style: {float:"left"}}, 
