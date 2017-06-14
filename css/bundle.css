@@ -223,14 +223,14 @@ body{
   margin-right:10px;
 }
 
-.summeryHex{
+.summaryHex{
   position: relative;
   left:-46.5px;
   top: 49px;
 
 }
 
-.summeryHexUpper{
+.summaryHexUpper{
   z-index: -2;
   position: absolute;
   left:-40px;
@@ -240,7 +240,7 @@ body{
   transform: scale(0);
   transition: all 0.3s;
 }
-.summeryHexUpper.animate{
+.summaryHexUpper.animate{
   transform: scale(1);
 }
 
@@ -304,7 +304,7 @@ body{
   transform: scale(1);
 }
 
-.summery-Icon{
+.summary-Icon{
   position: absolute;
   font-size: 24px;
   top:3px;
@@ -313,12 +313,12 @@ body{
   color:white;
   width:1px;
 }
-.summeryUpper{
+.summaryUpper{
   top: 65px;
   left:50px;
   position:relative;
 }
-.summery{
+.summary{
   margin-top: 15px;
   margin-bottom: 15px;
   position:relative;
@@ -333,14 +333,14 @@ body{
   z-index: -2;
 }
 
-.summery > .summery-header{
+.summary > .summary-header{
   position: absolute;
   top:-10px;
   left: 160px;
   opacity: 0;
 }
 
-.summery > .summery-content{
+.summary > .summary-content{
   position: absolute;
   top: 65px;
   padding-left: 20px;

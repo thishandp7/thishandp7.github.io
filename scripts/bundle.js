@@ -33346,7 +33346,7 @@ module.exports = require('./lib/React');
 },{}],186:[function(require,module,exports){
 
 var Data = {
-  "Summery": "I am a Full stack .NET developer with hands on experience in all technologies. Fluent in all aspects of Agile Methodologies. Capable of doing high quality work in different aspects of .NET software development. Adept at identifying issues with existing software and creating innovative new software programs. Committed to working within project specifications to deliver cost-effective and timely results. Addition to that I also have a very good understanding of low-level hardware and optimization techniques.",
+  "Summary": "I am a Full stack .NET developer with hands on experience in all technologies. Fluent in all aspects of Agile Methodologies. Capable of doing high quality work in different aspects of .NET software development. Adept at identifying issues with existing software and creating innovative new software programs. Committed to working within project specifications to deliver cost-effective and timely results. Addition to that I also have a very good understanding of low-level hardware and optimization techniques.",
 
   "Education": [
       {
@@ -33424,7 +33424,7 @@ var Data = {
   "Projects":[
     {
       "name": "3D Graphics Engine",
-      "description": "A personal project which I’m working during my free time from college. The engine is written in C++ using OpenGL and SDL libraries. My final goal is to impliment a Ray-tracer and a Physics engine to this.",
+      "description": "A personal project which I’m working during my free time from college. The engine is written in C++ using OpenGL and SDL libraries. My final goal is to implement a Ray-tracer and a Physics engine to this.",
       "period": "Feb 2016 - Present"
     },
 
@@ -34488,45 +34488,45 @@ var Hexogon = require('../HeaderContent/Hexogon');
 var Content = require('./Data');
 var LineDesign = require('./LineDesign');
 
-var summeryLineDesign = {
+var summaryLineDesign = {
   position: 'absolute',
   left:'110px',
   top: '5px',
   opacity: '0',
 }
 
-class Summery extends React.Component{
+class summary extends React.Component{
 
   componentDidMount(){
 
-    $('.summeryHexUpper').addClass('animate');
-    $('.summery').hide().fadeIn(100).animate({width: "1043px"});
-    $('.summery-header').delay(250).animate({left:"5px", opacity: 1});
-    $('.summeryLineDesign').delay(250).animate({left:"790px", opacity: 1});
-    $('.summery').animate({height: "165px"});
-    $('.summery-content').hide().delay(350).fadeIn(500);
+    $('.summaryHexUpper').addClass('animate');
+    $('.summary').hide().fadeIn(100).animate({width: "1043px"});
+    $('.summary-header').delay(250).animate({left:"5px", opacity: 1});
+    $('.summaryLineDesign').delay(250).animate({left:"790px", opacity: 1});
+    $('.summary').animate({height: "165px"});
+    $('.summary-content').hide().delay(350).fadeIn(500);
 
 
   };
 
   render(){
     return(
-      React.createElement("div", {className: "summeryUpper"}, 
-        React.createElement("div", {className: "summeryHexUpper"}, 
-          React.createElement("span", {className: "summery-Icon"}, 
+      React.createElement("div", {className: "summaryUpper"}, 
+        React.createElement("div", {className: "summaryHexUpper"}, 
+          React.createElement("span", {className: "summary-Icon"}, 
             React.createElement("i", {className: "fa fa-file-text", "aria-hidden": "false"})
           ), 
-          React.createElement("div", {className: "summeryHex"}, 
+          React.createElement("div", {className: "summaryHex"}, 
             React.createElement(Hexogon, {width: "420", dims: "0 0 800 800"})
           )
         ), 
-        React.createElement("div", {className: "summery"}, 
-          React.createElement("div", {className: "summeryLineDesign", style: summeryLineDesign}, 
+        React.createElement("div", {className: "summary"}, 
+          React.createElement("div", {className: "summaryLineDesign", style: summaryLineDesign}, 
             React.createElement(LineDesign, null)
           ), 
-          React.createElement("h1", {className: "summery-header"}, "SUMMERY"), 
-          React.createElement("div", {className: "summery-content"}, 
-            Content.Summery
+          React.createElement("h1", {className: "summary-header"}, "SUMMARY"), 
+          React.createElement("div", {className: "summary-content"}, 
+            Content.Summary
           )
         )
       )
@@ -34534,7 +34534,7 @@ class Summery extends React.Component{
   }
 };
 
-module.exports = Summery;
+module.exports = summary;
 },{"../HeaderContent/Hexogon":193,"./Data":186,"./LineDesign":189,"react":184}],193:[function(require,module,exports){
 "use strict";
 
@@ -34730,7 +34730,7 @@ var ReactDOM = require('react-dom');
 var ProfilePicture = require('./HeaderContent/ProfilePicture');
 var NamePlate = require('./HeaderContent/NamePlate');
 var Hexogon = require('./HeaderContent/Hexogon');
-var Summery = require('./BodyContent/Summery');
+var Summary = require('./BodyContent/Summary');
 var Education = require('./BodyContent/Education');
 var Experience = require('./BodyContent/Experience');
 var Projects = require('./BodyContent/Projects');
@@ -34868,7 +34868,7 @@ class MainPage extends React.Component{
     return(
       React.createElement("div", null, 
         React.createElement(Header, null), 
-        React.createElement(Summery, null), 
+        React.createElement(Summary, null), 
         React.createElement(Education, null), 
         React.createElement(Experience, null), 
         React.createElement(Projects, null), 
@@ -34880,4 +34880,4 @@ class MainPage extends React.Component{
 };
 
 ReactDOM.render(React.createElement(MainPage, null), document.getElementById('main'));
-},{"./BodyContent/Education":187,"./BodyContent/Experience":188,"./BodyContent/Projects":190,"./BodyContent/Skills":191,"./BodyContent/Summery":192,"./HeaderContent/Hexogon":193,"./HeaderContent/NamePlate":194,"./HeaderContent/ProfilePicture":195,"jquery":25,"jquery-ui":24,"react":184,"react-dom":31}]},{},[196]);
+},{"./BodyContent/Education":187,"./BodyContent/Experience":188,"./BodyContent/Projects":190,"./BodyContent/Skills":191,"./BodyContent/Summary":192,"./HeaderContent/Hexogon":193,"./HeaderContent/NamePlate":194,"./HeaderContent/ProfilePicture":195,"jquery":25,"jquery-ui":24,"react":184,"react-dom":31}]},{},[196]);
