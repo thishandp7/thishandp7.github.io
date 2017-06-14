@@ -34792,7 +34792,7 @@ class ContactIcons extends React.Component{
 
   componentDidMount(){
     $('.fa-linkedin-square').animate({left: "-40px"}, 'slow');
-    $('.fa-facebook-square').animate({left: "2px"}, 'slow');
+    $('.fa-github-square').animate({left: "2px"}, 'slow');
     $('.fa-youtube-square').animate({left: "46px"}, 'slow');
 
 
@@ -34821,13 +34821,13 @@ class ContactIcons extends React.Component{
     return(
         React.createElement("div", {className: "c-icons"}, 
           React.createElement("div", {className: "c-icons-container"}, 
-            React.createElement("a", {href: 'https://www.linkedin.com/in/thishandp7/', target: "_blank"}, 
+            React.createElement("a", {href: 'https://www.linkedin.com/in/thishandp7/', target: "_blank", title: "Linkedin"}, 
               React.createElement("i", {className: "fa fa-linkedin-square", "aria-hidden": "false", style: {top:"5px", left: "350px", position: "absolute"}})
             ), 
-            React.createElement("a", {href: 'https://www.facebook.com/thishandp7', target: "_blank"}, 
-              React.createElement("i", {className: "fa fa-facebook-square", "aria-hidden": "false", style: {top:"5px", left: "350px", position: "absolute"}})
+            React.createElement("a", {href: 'https://github.com/thishandp7', target: "_blank", title: "Github"}, 
+              React.createElement("i", {className: "fa fa-github-square", "aria-hidden": "false", style: {top:"5px", left: "350px", position: "absolute"}})
             ), 
-            React.createElement("a", {href: 'https://www.youtube.com/user/THISHANDP', target: "_blank"}, 
+            React.createElement("a", {href: 'https://www.youtube.com/user/THISHANDP', target: "_blank", title: "YouTube"}, 
               React.createElement("i", {className: "fa fa-youtube-square", "aria-hidden": "false", style: {top:"5px", left: "350px", position: "absolute"}})
             )
         )
