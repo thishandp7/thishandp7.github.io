@@ -33424,8 +33424,18 @@ var Data = {
   "Projects":[
     {
       "name": "3D Graphics Engine",
-      "description": "A personal project which I’m working during my free time from college. The engine is written in C++ using OpenGL and SDL libraries. My final goal is to implement a Ray-tracer and a Physics engine to this.",
+      "description": "A personal project which I’m working on during my free time from college. This engine can read any .obj file and it will render the polygons in the screen. My final goal is to implement a Ray-tracer and a Physics engine with this.",
+      "Tools": ["C++", "OpenGL", "SDL"],
+      "repoLink": "https://github.com/thishandp7/3D-Graphics-Engine",
       "period": "Feb 2016 - Present"
+    },
+
+    {
+      "name": "Restaurant Automation",
+      "description": "A self-contained product which interacts with various types of users, such as Waiters, Chefs, Hosts, Managers, Owner(s), Restaurant Customers and busboys. This system changes its interface according to the user, for ease of use. Also it helps the store manage its inventory. This app can manage orders, sales, keep track of seating and reservations, notify busboys of tables that need to be cleared, alert waiters when the food is ready for delivery, help managers with record keeping.",
+      "Tools": ["C#", "ASP.Net", "MVC 5", "jQuery", "Ajax", "Razor", "HTML", "CSS", "SQL", "Entity Framework"],
+      "repoLink": "https://github.com/thishandp7/SE240---RestaurantAutomation",
+      "period": "Jan 2017 - May 2017"
     },
 
   ],
@@ -33446,6 +33456,14 @@ var Data = {
     {
       "skill": "ASP.Net",
       "skillLevel": 7
+    },
+    {
+      "skill": "SQL",
+      "skillLevel": 2
+    },
+    {
+      "skill": "Entity Framework",
+      "skillLevel": 4
     },
     {
       "skill": "Java",
@@ -33472,6 +33490,10 @@ var Data = {
       "skillLevel": 5
     },
     {
+      "skill": "NodeJS",
+      "skillLevel": 4
+    },
+    {
       "skill": "HTML5",
       "skillLevel": 6
     },
@@ -33484,8 +33506,16 @@ var Data = {
       "skillLevel": 7
     },
     {
-      "skill": "TFS",
+      "skill": "Team Foundation Server",
       "skillLevel": 7
+    },
+    {
+      "skill": "Confluence",
+      "skillLevel": 5
+    },
+    {
+      "skill": "JIRA",
+      "skillLevel": 5
     },
     {
       "skill": "Visual Studio",
@@ -34031,7 +34061,7 @@ var projects = {
     padding: "1px 10px 20px 5px",
     boxShadow: "1px 1px 2px #888888",
     borderRadius: "3px",
-    zIndex: "-2"
+    zIndex: "auto"
 };
 
 var projectsUpper = {
@@ -34089,7 +34119,7 @@ const DateTag = () =>{
   return(
     React.createElement("div", {style: {position:"absolute", top:"15px", left: "695px", }}, 
       React.createElement("svg", {width: "225"}, 
-        React.createElement("polygon", {points: "15,10 190,10 190,35 15,35 0,22", fill: "#b9c9ea"})
+        React.createElement("polygon", {points: "15,10 195,10 195,35 15,35 0,22", fill: "#b9c9ea"})
       )
     )
   );
@@ -34129,6 +34159,7 @@ class ProjectList extends React.Component{
   render(){
     return(
       React.createElement("div", null, 
+
         React.createElement("ul", {style: {listStyleType: "none"}}, 
         
             this.props.data.map(function(pro, i){
@@ -34144,7 +34175,21 @@ class ProjectList extends React.Component{
             ), 
             React.createElement("div", {className: "pro-info", style: {position: "relative", width: "600px", left: "150px"}}, 
               React.createElement("h3", null, React.createElement("b", null, pro.name)), 
-              React.createElement("span", null, pro.description)
+              React.createElement("span", null, pro.description), 
+              React.createElement("h5", null, React.createElement("b", null, "Tools Used: ")), 
+              React.createElement("ul", {style: {position:"relative", top: "-27.5px", left: "40px"}}, 
+                
+                  pro.Tools.map(function(tl, j){
+                    return React.createElement("span", {key: j}, tl, ", ")
+                  })
+                
+              ), 
+              React.createElement("div", {className: "repobutton"}, 
+                React.createElement("a", {href: pro.repoLink, target: "_blank", title: "Github"}, 
+                  React.createElement("i", {className: "fa fa-github", "aria-hidden": "false"}), 
+                  React.createElement("b", null, " Check out the repository here")
+                )
+              )
             )
             )
           })
@@ -34189,7 +34234,7 @@ class Projects extends React.Component{
         $('.projects').hide().fadeIn(150).animate({width: "1043px"});
         $('.projects-header').delay(150).animate({left:"5px", opacity: 1});
         $('.projectsLineDesign').delay(400).animate({left:"790px", opacity: 1});
-        $('.projects').animate({height: "205px"});
+        $('.projects').animate({height: "540px"});
         $('.projects-content').delay(400).fadeIn(500);
         show = false;
         hide = true;
@@ -34379,14 +34424,14 @@ class SkillsList extends React.Component{
                 React.createElement("div", null, 
                   _.range(ski.skillLevel).map( j =>
                     React.createElement("div", {key: j, style: {float:"left"}}, 
-                      React.createElement("div", {className: "parallelogram", style: {backgroundColor:"#437bda", height:"13px", width:"33px", position:"relative", marginRight:"10px"}})
+                      React.createElement("div", {className: "parallelogram", style: {backgroundColor:"#437bda", top: "5px", height:"13px", width:"33px", position:"relative", marginRight:"10px"}})
                     )
                   )
                 ), 
                 React.createElement("div", {style: {position:"absolute", color:"red", top:"0px", zIndex: "-1px"}}, 
                   _.range(12).map( j =>
                     React.createElement("div", {key: j, style: {float:"left"}}, 
-                      React.createElement("div", {className: "parallelogram-gray", style: {backgroundColor:"lightGray", height:"13px", width:"33px", position:"relative", marginRight:"10px", zIndex:"-1"}})
+                      React.createElement("div", {className: "parallelogram-gray", style: {backgroundColor:"lightGray", top: "5px", height:"13px", width:"33px", position:"relative", marginRight:"10px", zIndex:"-1"}})
                     )
                   )
               )
@@ -34435,7 +34480,7 @@ class Skills extends React.Component{
         $('.skills').hide().fadeIn(150).animate({width: "1043px"});
         $('.skills-header').delay(150).animate({left:"5px", opacity: 1});
         $('.skillsLineDesign').delay(400).animate({left:"790px", opacity: 1});
-        $('.skills').animate({height: "905px"});
+        $('.skills').animate({height: "1065px"});
         $('.skills-content').delay(400).fadeIn(500);
         show = false;
         hide = true;
@@ -34844,9 +34889,9 @@ class Header extends React.Component{
         React.createElement("div", {className: "header"}, 
           React.createElement(ProfilePicture, {size: "500px"}), 
           React.createElement(Hexogon, {width: "420", dims: "0 0 200 200"}), 
-          React.createElement(NamePlate, null), 
-          React.createElement(SubHeader, null)
-        )
+          React.createElement(NamePlate, null)
+        ), 
+        React.createElement(SubHeader, null)
       )
     );
   }
