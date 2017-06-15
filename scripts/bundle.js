@@ -34480,7 +34480,7 @@ class Skills extends React.Component{
         $('.skills').hide().fadeIn(150).animate({width: "1043px"});
         $('.skills-header').delay(150).animate({left:"5px", opacity: 1});
         $('.skillsLineDesign').delay(400).animate({left:"790px", opacity: 1});
-        $('.skills').animate({height: "1065px"});
+        $('.skills').animate({height: "1080px"});
         $('.skills-content').delay(400).fadeIn(500);
         show = false;
         hide = true;
