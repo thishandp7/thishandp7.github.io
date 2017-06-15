@@ -34382,7 +34382,7 @@ class SkillsList extends React.Component{
     var hideList = false;
     var scrollTopList;
     var winHeightList;
-    var skiPosList = 1855;
+    var skiPosList = 2190;
 
     $(window).scroll(function(){
 
@@ -34466,7 +34466,7 @@ class Skills extends React.Component{
     var hide = false;
     var scrollTop;
     var winHeight;
-    var skPos = 1855;
+    var skPos = 2190;
 
     $('.skills-content').hide();
 
