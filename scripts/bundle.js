@@ -33665,13 +33665,6 @@ class EducationList extends React.Component{
         $('.ed-info').delay(550).animate({left: "0px"});
         $('.ed-gradDate').delay(550).animate({left: "90px"});
         showList = false;
-        hideList = true;
-      }
-      else if((scrollTopList + winHeightList) < edPosList && hideList){
-        $('.ed-info').animate({left: "400px"});
-        $('.ed-gradDate').animate({left: "-500px"});
-        hideList = false;
-        showList = true;
       }
     });
 
@@ -33747,17 +33740,6 @@ class Education extends React.Component{
         $('.education').animate({height: "335px"});
         $('.education-content').delay(400).fadeIn(500);
         show = false;
-        hide = true;
-      }
-      else if((scrollTop + winHeight) < edPos && hide){
-        $('.educationHexUpper').removeClass('animate');
-        $('.education').delay(200).fadeOut(100).animate({width: "0px"});
-        $('.education-header').delay(100).animate({left:"0px", opacity: 0});
-        $('.educationLineDesign').delay(400).animate({left:"110px", opacity: 0});
-        $('.education').animate({height: "0px"});
-        $('.education-content').delay(400).fadeOut(500);
-        hide = false;
-        show = true;
       }
     });
 
@@ -33893,13 +33875,6 @@ class ExperienceList extends React.Component{
         $('.ex-info').delay(550).animate({left: "0px"});
         $('.ex-gradDate').delay(550).animate({left: "90px"});
         showList = false;
-        hideList = true;
-      }
-      else if((scrollTopList + winHeightList) < exPosList && hideList){
-        $('.ex-info').delay(550).animate({left: "400px"});
-        $('.ex-gradDate').delay(550).animate({left: "-500px"});
-        hideList = false;
-        showList = true;
       }
     });
   }
@@ -33978,17 +33953,6 @@ class Experience extends React.Component{
         $('.experience').animate({height: "845px"});
         $('.experience-content').delay(400).fadeIn(500);
         show = false;
-        hide = true;
-      }
-      else if((scrollTop + winHeight) < exPos && hide){
-        $('.experienceHexUpper').removeClass('animate');
-        $('.experience').fadeOut(200).animate({width: "300px"});
-        $('.experience-header').delay(100).animate({left:"0px", opacity: 0});
-        $('.experienceLineDesign').delay(400).animate({left:"110px", opacity: 0});
-        $('.experience').animate({height: "70px"});
-        $('.experience-content').delay(400).fadeOut(500);
-        hide = false;
-        show = true;
       }
     });
 
@@ -34144,13 +34108,6 @@ class ProjectList extends React.Component{
         $('.pro-info').delay(550).animate({left: "0px"});
         $('.pro-period').delay(550).animate({left: "90px"});
         showList = false;
-        hideList = true;
-      }
-      else if((scrollTopList + winHeightList) < poPosList && hideList){
-        $('.pro-info').delay(550).animate({left: "400px"});
-        $('.pro-period').delay(550).animate({left: "-500px"});
-        hideList = false;
-        showList = true;
       }
     });
 
@@ -34237,17 +34194,6 @@ class Projects extends React.Component{
         $('.projects').animate({height: "540px"});
         $('.projects-content').delay(400).fadeIn(500);
         show = false;
-        hide = true;
-      }
-      else if((scrollTop + winHeight) < poPos && hide){
-        $('.projectsHexUpper').removeClass('animate');
-        $('.projects').fadeOut(200).animate({width: "300px"});
-        $('.projects-header').delay(100).animate({left:"0px", opacity: 0});
-        $('.projectsLineDesign').delay(400).animate({left:"110px", opacity: 0});
-        $('.projects').animate({height: "70px"});
-        $('.projects-content').delay(400).fadeOut(500);
-        hide = false;
-        show = true;
       }
     });
 
@@ -34394,14 +34340,6 @@ class SkillsList extends React.Component{
         //$('.levels').hide().delay(1100).animate({left: "250px"}).fadeIn(100);
         $('.levels').delay(700).animate({left: "250px"});
         showList = false;
-        hideList = true;
-      }
-      else if((scrollTopList + winHeightList) < skiPosList && hideList){
-        $('.ski-info').delay(550).animate({left: "400px"});
-        $('.levels').delay(700).animate({left: "500px"});
-        //$('.levels').hide().animate({left: "500px"});;
-        hideList = false;
-        showList = true;
       }
     });
   }
@@ -34483,17 +34421,6 @@ class Skills extends React.Component{
         $('.skills').animate({height: "1080px"});
         $('.skills-content').delay(400).fadeIn(500);
         show = false;
-        hide = true;
-      }
-      else if((scrollTop + winHeight) < skPos && hide){
-        $('.skillsHexUpper').removeClass('animate');
-        $('.skills').fadeOut(200).animate({width: "400px"});
-        $('.skills-header').delay(100).animate({left:"0px", opacity: 0});
-        $('.skillsLineDesign').delay(400).animate({left:"110px", opacity: 0});
-        $('.skills').animate({height: "70px"});
-        $('.skills-content').delay(400).fadeOut(500);
-        hide = false;
-        show = true;
       }
     });
 
